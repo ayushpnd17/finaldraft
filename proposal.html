@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>One Question 💜</title>
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-family:'Segoe UI',sans-serif;
+  background:radial-gradient(circle at top,#fbcfe8,#a78bfa);
+}
+
+.card{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  width:90%;
+  max-width:350px;
+  text-align:center;
+  box-shadow:0 15px 40px rgba(0,0,0,.2);
+}
+
+h1{
+  color:#7c3aed;
+}
+
+input{
+  width:100%;
+  padding:12px;
+  margin:15px 0;
+  border-radius:10px;
+  border:1px solid #ddd;
+  font-size:16px;
+  text-align:center;
+}
+
+button{
+  background:#7c3aed;
+  color:white;
+  border:none;
+  padding:12px 20px;
+  border-radius:12px;
+  font-size:16px;
+  cursor:pointer;
+  width:100%;
+}
+
+button:hover{
+  background:#6d28d9;
+}
+
+.error{
+  color:#dc2626;
+  margin-top:10px;
+  display:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h1>💜 Just One Step 💜</h1>
+  <p>Enter the special date to unlock something beautiful ✨</p>
+
+  <input type="password" id="pwd" placeholder="DDMMYYYY">
+  <button onclick="check()">Unlock 💖</button>
+
+  <div class="error" id="error">Wrong password 😢</div>
+</div>
+
+<script>
+function check(){
+  const pass = document.getElementById("pwd").value;
+  if(pass === "12052024"){
+    window.location.href = "https://ayushpnd17.github.io/finaldraft/";
+  } else {
+    document.getElementById("error").style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
